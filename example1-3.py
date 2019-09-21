@@ -3,8 +3,8 @@ def is_power_of_two(n):
         if n % 2 == 0:
             n = n / 2
         else:
-            return "Nope"
-    return "Yes"
+            return False
+    return True
 
 
 if __name__ == "__main__":
