@@ -6,7 +6,7 @@ def get_larger_perimeter(L):
                 if (L[i] + L[j] > L[k]) & (L[i] + L[k] > L[j]) & (L[j] + L[k] > L[i]):
                     if maxp < L[i] + L[j] + L[k]:
                         maxp = L[i] + L[j] + L[k]
-    return maxP
+    return maxp
 
 
 if __name__ == "__main__":
