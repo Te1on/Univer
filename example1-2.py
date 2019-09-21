@@ -4,9 +4,9 @@ def get_digit_sum(n):
     for digit in str_n:
         n_sum += int(digit)
     if n % n_sum == 0:
-        return '**TRUE**'
+        return True
     else:
-        return '**FALSE**'
+        return False
 
 
 if __name__ == "__main__":
