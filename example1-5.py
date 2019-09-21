@@ -2,8 +2,8 @@ def is_self_dividing(n):
     str_n = str(n)
     for digit in str_n:
         if n % int(digit) != 0:
-            return 'not self dividing'
-    return 'self dividing'
+            return False
+    return True
 
 
 if __name__ == '__main__':
