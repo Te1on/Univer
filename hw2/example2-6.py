@@ -1,8 +1,8 @@
 def get_two_sum(nums, k):
-    for i in range(len(nums)):
-        for j in range(i + 1, len(nums)):
-            if nums[i] + nums[j] == k:
-                return i, j
+    d = dict(enumerate(nums))
+    for i in d.keys():
+        if k - d[i] in d.values():
+            return list(d.keys())[list(d.values()).index(k - d[i])], i
     return None
 
 
