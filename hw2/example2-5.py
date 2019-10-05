@@ -6,10 +6,11 @@ def is_valid(braces_string):
         if brace == '(':
             queue.append(')')
         elif brace == ')':
-            if not queue or brace != queue.pop():
+            a = queue.pop()
+            if not queue != a or brace != a:
                 return False
     return not queue
 
 
 if __name__ == "__main__":
-    print(is_valid('()()(('))
+    print(is_valid('()()(())'))
