@@ -35,11 +35,13 @@ def get_partition(S):
         parts.append(S[a: b + 1])
         # А затем "удалить" ее из основной строки для удобства
         if a != 0 and b != len(S):
-            S = S[:a] + S[b:]
+            S = S[:a] + S[b + 1:]
+
         elif a == 0:
             S = S[b + 1:]
+
     return parts
 
 
 if __name__ == "__main__":
-    print(get_partition("qbqbcbqcqdufugduhxjhk)lxj"))
+    print(get_partition("ffffaaaa"))
