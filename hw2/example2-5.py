@@ -5,12 +5,15 @@ def is_valid(braces_string):
     for brace in braces_string:
         if brace == '(':
             queue.append(')')
-        elif brace == ')':
+        elif brace == ')' and queue:
             a = queue.pop()
+
             if not queue != a or brace != a:
                 return False
+        else:
+            return False
     return not queue
 
 
 if __name__ == "__main__":
-    print(is_valid('()()(())'))
+    print(is_valid(')('))
